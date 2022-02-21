@@ -1,0 +1,113 @@
+main {
+  background-color: rgb(32, 32, 32);
+  height: 100vh;
+}
+
+header {
+  align-items: center;
+  background-color: rgb(64, 64, 64);
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: calc(100% - 20px);
+}
+
+header > h2 {
+  color: white;
+  margin: 0;
+}
+
+.clock {
+  background-color: white;
+  border: 5px solid rgb(92, 92, 92);
+  border-radius: 50%;
+  box-shadow: 0 15px 30px black;
+  height: 80vw;
+  left: 50vw;
+  max-height: 50vh;
+  max-width: 50vh;
+  position: absolute;
+  width: 80vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  transition-duration: 300ms;
+}
+
+.point-container {
+  position: absolute;
+  height: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  width: 1px;
+}
+
+.point {
+  background-color: black;
+  position: absolute;
+  width: 1px;
+}
+
+.point-container > p {
+  position: absolute;
+  transform: translateX(-50%) rotate(calc(var(--fixRotation) * -6deg));
+}
+
+.pointer {
+  background-color: black;
+  left: 50%;
+  position: absolute;
+  transform-origin: bottom;
+  width: 1px;
+}
+
+.seconds {
+  background-color: red;
+  height: 45%;
+  top: 5%;
+}
+
+.minutes {
+  height: 40%;
+  top: 10%;
+}
+
+.hours {
+  height: 30%;
+  left: calc(50% - 1px);
+  top: 20%;
+  width: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .seconds {
+    animation: pointer-spin infinite 60s linear;
+  }
+  .minutes {
+    animation: pointer-spin infinite 3600s linear;
+  }
+  .hours {
+    animation: pointer-spin infinite 43200s linear;
+  }
+}
+
+@keyframes pointer-spin {
+  from {
+    transform: rotate(calc(var(--i) * 1deg));
+  }
+  to {
+    transform: rotate(calc(var(--i) * 1deg + 360deg));
+  }
+}
+
+footer {
+  background-color: rgb(64, 64, 64);
+  bottom: 0;
+  color: white;
+  position: absolute;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: calc(100% - 20px);
+}
