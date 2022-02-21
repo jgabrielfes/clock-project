@@ -1,5 +1,9 @@
+:root {
+  --bgColor: rgb(32, 32, 32);
+}
+
 main {
-  background-color: rgb(32, 32, 32);
+  background-color: var(--bgColor);
   height: 100vh;
 }
 
@@ -16,6 +20,22 @@ header {
 header > h2 {
   color: white;
   margin: 0;
+}
+
+header > .page-mode-btn {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  transition-duration: 300ms;
+}
+
+header > .page-mode-btn:hover {
+  background-color: rgb(32, 32, 32);
 }
 
 .clock {
@@ -106,7 +126,7 @@ footer {
   color: white;
   position: absolute;
   display: flex;
-  height: 50px;
+  min-height: 50px;
   justify-content: space-between;
   padding: 0 10px;
   width: calc(100% - 20px);
