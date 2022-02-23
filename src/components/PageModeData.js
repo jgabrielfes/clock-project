@@ -9,7 +9,7 @@ const pageModeColors = {
   },
   dark: {
     bgColor: 'rgb(32, 32, 32)',
-    darkIconColor: 'purple',
+    darkIconColor: 'blueviolet',
     fontColor: 'white',
     headerColor: 'rgb(64, 64, 64)',
     lightIconColor: 'white',
