@@ -1,15 +1,12 @@
-:root {
-  --bgColor: rgb(32, 32, 32);
-}
-
 main {
   background-color: var(--bgColor);
   height: 100vh;
+  transition-duration: 300ms;
 }
 
 header {
   align-items: center;
-  background-color: rgb(64, 64, 64);
+  background-color: var(--headerColor);
   display: flex;
   height: 50px;
   justify-content: space-between;
@@ -18,31 +15,39 @@ header {
 }
 
 header > h2 {
-  color: white;
+  color: var(--fontColor);
   margin: 0;
 }
 
-header > .page-mode-btn {
+.page-mode-btn {
   align-items: center;
   background-color: transparent;
   border: none;
-  border-radius: 8px;
-  color: white;
+  border-radius: 15px;
+  color: var(--fontColor);
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 0 15px;
   transition-duration: 300ms;
 }
 
-header > .page-mode-btn:hover {
-  background-color: rgb(32, 32, 32);
+.page-mode-btn > :nth-child(1) {
+  color: var(--lightIconColor);
+}
+
+.page-mode-btn > :nth-child(3) {
+  color: var(--darkIconColor);
+}
+
+.page-mode-btn:hover {
+  background-color: rgba(32, 32, 32, 0.5);
 }
 
 .clock {
   background-color: white;
   border: 5px solid rgb(92, 92, 92);
   border-radius: 50%;
-  box-shadow: 0 15px 30px black;
+  box-shadow: 0 15px 30px var(--shadowColor);
   height: 80vw;
   left: 50vw;
   max-height: 50vh;
@@ -121,9 +126,9 @@ header > .page-mode-btn:hover {
 }
 
 footer {
-  background-color: rgb(64, 64, 64);
+  background-color: var(--headerColor);
   bottom: 0;
-  color: white;
+  color: var(--fontColor);
   position: absolute;
   display: flex;
   min-height: 50px;
