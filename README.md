@@ -1,6 +1,6 @@
 # Where can i access this project?
 
-You can access this project through [the link](https://jgabrielfes-clock-project.vercel.app/).
+You can access this project through [the link](https://clock-project-jgabrielfes.vercel.app/).
 
 # Getting Started with Create React App
 
